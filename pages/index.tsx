@@ -24,47 +24,59 @@ const Home: NextPage = () => {
         <Navbar />
         <About />
         <Technologies />
+        <Skills />
         <Jobs />
         <Projects />
-        <Skills />
         <Contact />
       </main>
-      <footer className='text-gray-400 bg-gray-800 body-font'>
-        <div className='container px-10 lg:px-40'>
+      <footer className='text-gray-500 bg-gray-800 body-font'>
+        <div className='container lg:max-w-5xl text-sm m-auto py-8 flex flex-col gap-8 px-10 lg:px-40'>
           <div>
             UI heavily inspired by{' '}
             <a
-              className='text-green-400 hover:text-green-300 hover:underline'
+              className='text-green-600 hover:text-green-500 hover:underline'
               href='https://www.freecodecamp.org/news/build-portfolio-website-react/'
             >
               this article on freecodecamp
             </a>
             <br />
-            <span className='text-gray-600 text-sm'>
+            <span className='text-gray-700 relative -top-1'>
               (I already knew how to do it, I just thought the UI looked sharp)
             </span>
           </div>
           <div className='flex items-center gap-4'>
-            Made with{' '}
-            <div className='flex items-center h-0'>
-              <TailwindcssPlainWordmarkIcon color='white' height={'7rem'} />{' '}
-            </div>
+            Made with&nbsp;
+            <a
+              href='https://tailwindcss.com/'
+              className='flex items-center h-0'
+            >
+              <TailwindcssPlainWordmarkIcon
+                className='text-gray-300 hover:text-white'
+                color='currentColor'
+                height={'7rem'}
+              />
+              &nbsp;
+            </a>
             &times;
-            <div className='flex items-center h-0'>
-              <NextjsPlainWordmarkIcon color='white' height={'4rem'} />
-            </div>
+            <a href='https://nextjs.org/' className='flex items-center h-0'>
+              <NextjsPlainWordmarkIcon
+                className='text-gray-300 hover:text-white'
+                color='currentColor'
+                height={'4rem'}
+              />
+            </a>
           </div>
           <div>
-            Icons by{' '}
+            Icons by&nbsp;
             <a
-              className='text-green-400 hover:text-green-300 hover:underline'
+              className='text-green-600 hover:text-green-500 hover:underline'
               href='https://heroicons.com/'
             >
               heroicons
-            </a>{' '}
-            and{' '}
+            </a>
+            &nbsp;and&nbsp;
             <a
-              className='text-green-400 hover:text-green-300 hover:underline'
+              className='text-green-600 hover:text-green-500 hover:underline'
               href='https://devicon.dev/'
             >
               Devicon
@@ -79,11 +91,13 @@ const Home: NextPage = () => {
 const NextjsPlainWordmarkIcon = ({
   color,
   height,
+  className,
 }: {
   color: string;
   height: string;
+  className: string;
 }) => (
-  <svg viewBox='0 0 128 128' height={height}>
+  <svg viewBox='0 0 128 128' height={height} className={className}>
     <path
       fill={color}
       d='M30.2 45.9h24.1v1.9H32.4v14.4H53v1.9H32.4v15.8h22.2v1.9H30.2V45.9zm26.3 0h2.6l11.4 15.8L82 45.9l15.8-20-26 37.5 13.4 18.4h-2.7L70.4 65 58.2 81.8h-2.6l13.5-18.4-12.6-17.5zm29.7 1.9v-1.9h27.5v1.9H101v34h-2.2v-34H86.2zM0 45.9h2.7l38.2 56.8-15.8-20.9L2.3 48.6l-.1 33.2H0zm113.5 33.4c.5 0 .8-.3.8-.8s-.3-.8-.8-.8-.8.3-.8.8.4.8.8.8zm2.2-2.1c0 1.3 1 2.2 2.4 2.2 1.5 0 2.4-.9 2.4-2.5v-5.5h-1.2v5.5c0 .9-.4 1.3-1.2 1.3-.7 0-1.2-.4-1.2-1.1h-1.2zm6.3-.1c.1 1.4 1.2 2.3 3 2.3s3-.9 3-2.4c0-1.2-.7-1.8-2.2-2.2l-.9-.2c-1-.2-1.4-.6-1.4-1.1 0-.7.6-1.2 1.6-1.2.9 0 1.5.4 1.6 1.2h1.2c-.1-1.3-1.2-2.2-2.8-2.2-1.7 0-2.8.9-2.8 2.3 0 1.1.6 1.8 2 2.1l1 .2c1 .2 1.5.6 1.5 1.2 0 .7-.7 1.2-1.7 1.2s-1.8-.5-1.9-1.2H122z'
@@ -94,11 +108,13 @@ const NextjsPlainWordmarkIcon = ({
 const TailwindcssPlainWordmarkIcon = ({
   color,
   height,
+  className,
 }: {
   color: string;
   height: string;
+  className: string;
 }) => (
-  <svg viewBox='0 0 128 128' height={height}>
+  <svg viewBox='0 0 128 128' height={height} className={className}>
     <defs>
       <linearGradient
         id='tailwindcss-original-wordmark-a'
