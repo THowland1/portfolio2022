@@ -1,5 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import TypeAnimation from '../util/TypeAnimation';
+
+async function wait(ms: number) {
+  return new Promise<void>((resolve, reject) =>
+    setTimeout(() => resolve(), ms)
+  );
+}
+
+async function doTheTypeAnimation(el: HTMLElement) {
+  await removeInnerText(el);
+  el.innerText = 'fieukrdhgoilehr';
+  await wait(1000);
+  await removeInnerText(el);
+}
+
+async function removeInnerText(el: HTMLElement) {
+  while (el.innerText.length) {
+    el.innerText = el.innerText.slice(0, -1);
+    await wait(500);
+  }
+}
 
 export default function About() {
   return (
@@ -8,7 +29,22 @@ export default function About() {
         <div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
           <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-white'>
             Hi, I&apos;m Tom. <br />
-            Full-stack engineer
+            Full-stack{' '}
+            <TypeAnimation
+              sequence={[
+                'engineer',
+                3000,
+                'bloke',
+                3000,
+                'guy',
+                3000,
+                'craftsman',
+                3000,
+                'chap',
+                3000,
+              ]}
+            />
+            <span className='blink w-[2px] bg-white inline-block'>&nbsp;</span>
           </h1>
           <br className='hidden lg:inline-block' />
           <p className='mb-8 leading-relaxed'>

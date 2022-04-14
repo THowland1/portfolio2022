@@ -18,3 +18,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.blink {
+  animation: blink 1s steps(1) infinite;
+  color: inherit;
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}

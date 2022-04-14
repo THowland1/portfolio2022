@@ -12,14 +12,14 @@ export default function Navbar() {
           </span>
         </Link>
         <nav className='md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center'>
+          <Link href='#skills' passHref>
+            <span className='mr-5 hover:text-white'>Skills</span>
+          </Link>
           <Link href='#jobs' passHref>
             <span className='mr-5 hover:text-white'>Timeline</span>
           </Link>
           <Link href='#projects' passHref>
             <span className='mr-5 hover:text-white'>Projects</span>
-          </Link>
-          <Link href='#skills' passHref>
-            <span className='mr-5 hover:text-white'>Skills</span>
           </Link>
         </nav>
         <Link href='#contact' passHref>
