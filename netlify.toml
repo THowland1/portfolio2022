@@ -4,3 +4,8 @@ package = "@netlify/plugin-nextjs"
 [build]
 command = "yarn next build"
 publish = ".next"
+
+[[redirects]]
+  from = "/form-submit"
+  to = "/.netlify/functions/form-submit"
+  status = 200
