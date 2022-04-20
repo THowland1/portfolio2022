@@ -226,28 +226,31 @@ const jobs2 = [
 
 export default function Jobs() {
   return (
-    <section id='jobs' className='text-gray-400 bg-gray-900 body-font'>
+    <section
+      id='jobs'
+      className='text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-900 body-font'
+    >
       <div className='max-w-5xl px-5 py-10 mx-auto lg:px-40'>
         <div className='flex flex-col text-center  w-full mb-20'>
           <BriefcaseIcon className='mx-auto inline-block w-10 mb-4' />
-          <h1 className='sm:text-4xl text-3xl font-medium title-font mb-4 text-white'>
+          <h1 className='sm:text-4xl text-3xl font-medium title-font mb-4 text-gray-900 dark:text-white'>
             A Brief History of Tom
           </h1>
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
             What have I been up to in all of these years in the world of coding?
           </p>
         </div>
-        <div className='relative border-l border-gray-700 '>
+        <div className='relative border-l border-gray-300 dark:border-gray-700'>
           <ol>
             {jobs2.map((job, index) => (
               <li className='mb-10 ml-6 last:mb-0' key={index}>
-                <span className='flex absolute -left-3 justify-center items-center w-6 h-6 bg-green-900 rounded-full ring-8 ring-gray-800'>
+                <span className='flex absolute -left-3 justify-center items-center w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full ring-8 ring-white dark:ring-gray-800'>
                   <job.Icon className='w-4 h-4 text-green-500' />
                 </span>
-                <h3 className='flex items-center mb-1 text-lg font-semibold text-white'>
+                <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
                   {job.title}
                 </h3>
-                <div className='block mb-2 text-sm font-normal leading-none text-gray-400'>
+                <div className='block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400'>
                   {job.role}&nbsp;&bull;&nbsp;{job.dates}
                 </div>
                 <div>
@@ -255,7 +258,7 @@ export default function Jobs() {
                     {job.stack.map((tool, index) => (
                       <li
                         key={index}
-                        className='inline-flex items-center bg-green-500/10 text-white/60 px-2 py-[4px] rounded-md text-sm gap-1'
+                        className='inline-flex items-center bg-green-500/10 text-gray-900 dark:text-white/60 px-2 py-[4px] rounded-md text-sm gap-1'
                       >
                         <span>
                           <tool.Icon color='rgb(34 197 94)' />
@@ -271,7 +274,7 @@ export default function Jobs() {
               </li>
             ))}
           </ol>
-          <span className='relative h-2.5 w-2.5 rounded-md block bg-gray-700 -left-[.325rem]' />
+          <span className='relative h-2.5 w-2.5 rounded-md block bg-gray-300 dark:bg-gray-700 -left-[.325rem]' />
         </div>
       </div>
     </section>

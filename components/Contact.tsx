@@ -1,6 +1,31 @@
 import React, { FormEvent, useState } from 'react';
 
 import { ChatIcon, CheckCircleIcon, MailIcon } from '@heroicons/react/solid';
+const inputClass = `
+  w-full
+  rounded
+  border
+  py-1
+  px-3
+  resize-none
+  leading-6
+  outline-none
+  text-base
+  
+  bg-white dark:bg-gray-800
+  
+  focus:ring-2
+  focus:ring-indigo-300 dark:focus:ring-indigo-900
+  
+  border-gray-400 dark:border-gray-700
+  focus:border-indigo-500 dark:focus:border-indigo-500
+  
+  text-gray-700 dark:text-gray-100
+  
+  transition-colors
+  duration-200
+  ease-in-out`;
+const textareaClass = `${inputClass} h-32`;
 
 async function submit(e: FormEvent, data: any) {
   e.preventDefault();
@@ -42,7 +67,7 @@ export default function Contact() {
             className='flex flex-col md:m-auto w-full md:py-8 mt-8 md:mt-0'
           >
             <ChatIcon className='mx-auto inline-block w-10 mb-4' />
-            <h2 className='text-white sm:text-4xl text-3xl mb-1 font-medium title-font'>
+            <h2 className='text-gray-900 dark:text-white sm:text-4xl text-3xl mb-1 font-medium title-font'>
               Get in touch!
             </h2>
             <p className='leading-relaxed mb-5'>
@@ -61,7 +86,7 @@ export default function Contact() {
               <div className='relative mb-4'>
                 <label
                   htmlFor='name'
-                  className='leading-7 text-sm text-gray-400'
+                  className='leading-7 text-sm text-gray-500 dark:text-gray-400'
                 >
                   Name
                 </label>
@@ -72,13 +97,13 @@ export default function Contact() {
                   value={name}
                   disabled={submitted}
                   onChange={(e) => setName(e.target.value)}
-                  className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                  className={inputClass}
                 />
               </div>
               <div className='relative mb-4'>
                 <label
                   htmlFor='email'
-                  className='leading-7 text-sm text-gray-400'
+                  className='leading-7 text-sm text-gray-500 dark:text-gray-400'
                 >
                   Email
                 </label>
@@ -89,13 +114,13 @@ export default function Contact() {
                   name='email'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                  className={inputClass}
                 />
               </div>
               <div className='relative mb-4'>
                 <label
                   htmlFor='message'
-                  className='leading-7 text-sm text-gray-400'
+                  className='leading-7 text-sm text-gray-500 dark:text-gray-400'
                 >
                   Message
                 </label>
@@ -105,13 +130,13 @@ export default function Contact() {
                   value={message}
                   disabled={submitted}
                   onChange={(e) => setMessage(e.target.value)}
-                  className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
+                  className={textareaClass}
                 />
               </div>
               <button
                 disabled={submitted || loading}
                 type='submit'
-                className='flex gap-2 justify-center items-center text-white disabled:opacity-70 w-full bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'
+                className='flex gap-2 justify-center items-center text-white disabled:opacity-70 w-full bg-indigo-500 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'
               >
                 {loading ? (
                   <>
@@ -149,26 +174,26 @@ export default function Contact() {
         </div>
 
         <div className='flex justify-center gap-2 items-center my-4'>
-          <span className='bg-gray-800 h-[1px] flex-1'></span>
-          <span className='text-gray-600'>or</span>
-          <span className='bg-gray-800 h-[1px] flex-1'></span>
+          <span className='bg-gray-300 dark:bg-gray-800 h-[1px] flex-1'></span>
+          <span className='text-gray-400 dark:text-gray-600'>or</span>
+          <span className='bg-gray-300 dark:bg-gray-800 h-[1px] flex-1'></span>
         </div>
         <div className='flex justify-center gap-4'>
           <a
             href='mailto:tomhowland9@gmail.com'
-            className={`w-12 h-12 p-2 transition-transform rounded-full border-white border hover:scale-110  inline-block hover:bg-[#BB011C] text-white`}
+            className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#BB011C] text-gray-700 dark:text-white hover:text-white`}
           >
             <MailIcon />
           </a>
           <a
             href='https://www.linkedin.com/in/tomhowland9'
-            className={`w-12 h-12 p-2 transition-transform rounded-full border-white border hover:scale-110  inline-block hover:bg-[#0A66C2] text-white`}
+            className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#0A66C2] text-gray-700 dark:text-white hover:text-white`}
           >
             <LinkedinLettersIcon />
           </a>
           <a
             href='https://github.com/THowland1'
-            className={`w-12 h-12 p-2 transition-transform rounded-full border-white border hover:scale-110  inline-block hover:bg-[#242A2E] text-white`}
+            className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#242A2E] text-gray-700 dark:text-white hover:text-white`}
           >
             <GithubIcon />
           </a>
@@ -207,7 +232,7 @@ const LinkedinLettersIcon = (
 // Lovingly copied from the example in https://tailwindcss.com/docs/animation
 const LoadingSpinner = (props: React.ComponentProps<'svg'>): JSX.Element => (
   <svg
-    className='animate-spin h-5 w-5 text-white'
+    className='animate-spin h-5 w-5 text-gray-900 dark:text-white'
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     viewBox='0 0 24 24'

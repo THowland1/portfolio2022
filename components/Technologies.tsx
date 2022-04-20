@@ -7,8 +7,11 @@ import Marquee from 'react-fast-marquee';
 const tailwindGrey800 = [31, 41, 55] as [number, number, number];
 export default function Projects() {
   return (
-    <section id='technologies' className='text-gray-400 bg-gray-800 body-font'>
-      <Marquee gradientColor={tailwindGrey800}>
+    <section
+      id='technologies'
+      className='text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 body-font'
+    >
+      <Marquee gradient={false}>
         {[
           'React',
           'Next',
