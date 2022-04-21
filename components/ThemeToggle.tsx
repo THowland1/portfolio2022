@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const setDark = () => {
   localStorage.theme = 'dark';
@@ -12,8 +12,12 @@ const setLight = () => {
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(
-    globalThis?.localStorage?.theme === 'dark'
+    globalThis?.localStorage?.theme !== 'light'
   );
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains('dark'));
+  }, []);
 
   return (
     <button
@@ -26,9 +30,9 @@ export default function ThemeToggle() {
       }}
     >
       {isDark ? (
-        <MoonIcon className='w-4 h-4' />
-      ) : (
         <SunIcon className='w-4 h-4' />
+      ) : (
+        <MoonIcon className='w-4 h-4' />
       )}
     </button>
   );

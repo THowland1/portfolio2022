@@ -31,7 +31,28 @@ class MyDocument extends Document {
             async
             dangerouslySetInnerHTML={{
               __html: `
-           fetch('/pop-the-kettle-on')
+              if(!localStorage.kettlePopped) {
+                fetch('/pop-the-kettle-on').then(_ => localStorage.kettlePopped = true)
+                
+              }
+          `,
+            }}
+          />
+          <script
+            id='darkTheme'
+            dangerouslySetInnerHTML={{
+              __html: `
+          function checkDarkTheme() {
+
+            if (localStorage.theme === 'light') {
+              document.documentElement.classList.remove('dark')
+            } else {
+              document.documentElement.classList.add('dark')
+            }
+            
+            
+          }
+          checkDarkTheme()
           `,
             }}
           />

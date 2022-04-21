@@ -44,31 +44,6 @@ const Home: NextPage = () => {
 
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Script
-        id='darkTheme'
-        dangerouslySetInnerHTML={{
-          __html: `
-          function checkDarkTheme() {
-
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-              document.documentElement.classList.add('dark')
-            } else {
-              document.documentElement.classList.remove('dark')
-            }
-            
-            // Whenever the user explicitly chooses light mode
-            localStorage.theme = 'light'
-            
-            // Whenever the user explicitly chooses dark mode
-            localStorage.theme = 'dark'
-            
-            // Whenever the user explicitly chooses to respect the OS preference
-            localStorage.removeItem('theme')
-          }
-          checkDarkTheme()
-          `,
-        }}
-      />
 
       <main className='text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-900  body-font'>
         <Navbar />

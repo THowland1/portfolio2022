@@ -25,7 +25,8 @@ const inputClass = `
   
   border-gray-400 dark:border-gray-700
   focus:border-indigo-500 dark:focus:border-indigo-500
-  invalid:border-red-400 invalid:focus:border-red-500
+  invalid:focus:border-red-500
+  dark:invalid:focus:border-red-800
   
   text-gray-700 dark:text-gray-100
   
