@@ -12,7 +12,7 @@ export default function Navbar() {
             <span className='text-xl'>Tom Howland</span>
           </span>
         </Link>
-        <nav className='md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-lborder-gray-600	flex flex-wrap items-center text-base justify-center gap-5'>
+        <nav className='md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l border-gray-600	flex flex-wrap items-center text-base justify-center gap-5'>
           <Link href='#skills' passHref>
             <span className='hover:hover:text-white hover:transition-none cursor-pointer'>
               Skills
