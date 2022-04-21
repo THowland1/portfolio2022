@@ -1,6 +1,11 @@
 import React, { FormEvent, useState } from 'react';
 
-import { ChatIcon, CheckCircleIcon, MailIcon } from '@heroicons/react/solid';
+import {
+  ChatIcon,
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+  MailIcon,
+} from '@heroicons/react/solid';
 const inputClass = `
   w-full
   rounded
@@ -16,9 +21,11 @@ const inputClass = `
   
   focus:ring-2
   focus:ring-indigo-300 dark:focus:ring-indigo-900
+  invalid:focus:ring-red-300 dark:invalid:focus:ring-red-900
   
   border-gray-400 dark:border-gray-700
   focus:border-indigo-500 dark:focus:border-indigo-500
+  invalid:border-red-400 invalid:focus:border-red-500
   
   text-gray-700 dark:text-gray-100
   
@@ -30,7 +37,7 @@ const textareaClass = `${inputClass} h-32`;
 async function submit(e: FormEvent, data: any) {
   e.preventDefault();
 
-  await fetch('/form-submit', {
+  const response = await fetch('/form-submit', {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -43,6 +50,10 @@ async function submit(e: FormEvent, data: any) {
     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify(data), // body data type must match "Content-Type" header
   });
+
+  if (response.status !== 200) {
+    throw new Error('Not 200');
+  }
 }
 
 export default function Contact() {
@@ -50,6 +61,7 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [errored, setErrored] = useState(false);
   const [loading, setLoading] = useState(false);
 
   return (
@@ -61,6 +73,7 @@ export default function Contact() {
               setLoading(true);
               submit(e, { name, email, message })
                 .then((_) => setSubmitted(true))
+                .catch((_) => setErrored(true))
                 .finally(() => setLoading(false));
             }}
             name='contact'
@@ -78,7 +91,7 @@ export default function Contact() {
             <div
               className='text-left transition duration-700'
               style={
-                !submitted
+                !submitted && !errored
                   ? { opacity: 1 }
                   : { opacity: 0.1, pointerEvents: 'none' }
               }
@@ -98,6 +111,7 @@ export default function Contact() {
                   disabled={submitted}
                   onChange={(e) => setName(e.target.value)}
                   className={inputClass}
+                  required
                 />
               </div>
               <div className='relative mb-4'>
@@ -115,6 +129,7 @@ export default function Contact() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className={inputClass}
+                  required
                 />
               </div>
               <div className='relative mb-4'>
@@ -131,12 +146,16 @@ export default function Contact() {
                   disabled={submitted}
                   onChange={(e) => setMessage(e.target.value)}
                   className={textareaClass}
+                  required
                 />
               </div>
               <button
-                disabled={submitted || loading}
+                disabled={submitted || loading || errored}
                 type='submit'
-                className='flex gap-2 justify-center items-center text-white disabled:opacity-70 w-full bg-indigo-500 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'
+                className={`
+                flex gap-2 justify-center items-center text-white disabled:opacity-70 w-full  border-0 py-2 px-6 focus:outline-none  rounded text-lg
+                bg-indigo-500 hover:bg-indigo-600 disabled:hover:bg-indigo-500
+                `}
               >
                 {loading ? (
                   <>
@@ -163,13 +182,45 @@ export default function Contact() {
             className='flex flex-col items-center justify-center absolute inset-0 transition delay-1000 duration-700'
           >
             <span className='relative flex justify-center items-center w-10 h-10 rounded-full'>
-              <span className='beacon z-0 w-8 h-8 bg-gray-700 absolute inset-0 m-auto rounded-full'></span>
-              <span className='absolute flex z-1 justify-center items-center w-6 h-6 bg-green-900 rounded-full ring-8 ring-gray-800'>
+              <span className='beacon z-0 w-8 h-8 bg-green-300 dark:bg-gray-800 absolute inset-0 m-auto rounded-full'></span>
+              <span className='absolute flex z-1 justify-center items-center w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full ring-8 ring-green-200/50 dark:ring-gray-800'>
                 <CheckCircleIcon className='w-4 h-4 text-green-500' />
               </span>
             </span>
-            <span className='text-gray-200 mt-2'>Form submitted</span>
+            <span className='text-gray-900 dark:text-gray-200 mt-2'>
+              Form submitted
+            </span>
             <span>I&apos;ll be sure to take a look ASAP</span>
+          </div>
+          <div
+            style={
+              errored
+                ? { opacity: 1 }
+                : {
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transform: 'translateY(2rem)',
+                  }
+            }
+            className='flex flex-col items-center justify-center absolute inset-0 transition delay-1000 duration-700'
+          >
+            <span className='relative flex justify-center items-center w-10 h-10 rounded-full'>
+              <span className='beacon z-0 w-8 h-8 bg-red-300 dark:bg-gray-800 absolute inset-0 m-auto rounded-full'></span>
+              <span className='absolute flex z-1 justify-center items-center w-6 h-6 bg-red-100 dark:bg-red-900 rounded-full ring-8 ring-red-200/50 dark:ring-gray-800'>
+                <ExclamationCircleIcon className='w-4 h-4 text-red-500' />
+              </span>
+            </span>
+            <span className='text-gray-900 dark:text-gray-200 mt-2'>
+              Uh oh, this is embarrassing
+            </span>
+            <span>
+              Something appears to have not worked submitting the form
+            </span>
+            <span>Please reach out via email instead</span>
+            <span>
+              (and let me know that the form needs some TLC while you&apos;re at
+              it)
+            </span>
           </div>
         </div>
 
