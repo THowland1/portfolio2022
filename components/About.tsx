@@ -44,7 +44,9 @@ export default function About() {
                 3000,
               ]}
             />
-            <span className='blink font-extralight text-4xl'>|</span>
+            <span className='blink font-extralight text-4xl leading-[inherit]'>
+              |
+            </span>
           </h1>
           <br className='hidden lg:inline-block' />
           <p className='mb-8 leading-relaxed'>

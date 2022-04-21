@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section
       id='technologies'
-      className='text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 body-font'
+      className='text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 body-font shadow'
     >
       <Marquee gradient={false}>
         {[
@@ -22,7 +22,7 @@ export default function Projects() {
           'Angular',
         ].map((tech, i) => (
           <div
-            className='sm:text-3xl text-2xl font-medium text-gray-600 whitespace-nowrap my-2 mx-8'
+            className='sm:text-3xl text-2xl font-light text-gray-600 whitespace-nowrap my-2 mx-8'
             key={i}
           >
             {tech}
