@@ -244,7 +244,7 @@ export default function Jobs() {
           <ol>
             {jobs2.map((job, index) => (
               <li className='mb-10 ml-6 last:mb-0' key={index}>
-                <span className='flex absolute -left-3 justify-center items-center w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full ring-8 ring-white dark:ring-gray-800'>
+                <span className='flex absolute -left-3 justify-center items-center w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full ring-8 ring-green-500/10 dark:ring-gray-800'>
                   <job.Icon className='w-4 h-4 text-green-500' />
                 </span>
                 <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
