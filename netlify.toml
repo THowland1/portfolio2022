@@ -9,3 +9,8 @@ publish = ".next"
   from = "/form-submit"
   to = "/.netlify/functions/form-submit"
   status = 200
+
+[[redirects]]
+  from = "/pop-the-kettle-on"
+  to = "/.netlify/functions/pop-the-kettle-on"
+  status = 200

@@ -13,6 +13,7 @@
     "@heroicons/react": "^1.0.6",
     "@sendgrid/mail": "^7.6.2",
     "next": "12.1.4",
+    "node-fetch": "^3.2.3",
     "react": "18.0.0",
     "react-devicons": "^2.14.0",
     "react-dom": "18.0.0",
