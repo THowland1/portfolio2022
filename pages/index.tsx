@@ -29,7 +29,10 @@ const Home: NextPage = () => {
         />
         <meta property='og:url' content='https://tomhowland.com' />
         <meta property='og:site_name' content='Tom Howland' />
-        <meta property='og:image' content='/og-image.png' />
+        <meta
+          property='og:image'
+          content='https://tomhowland.com/og-image.png'
+        />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:site' content='@tomdoestweet' />
         <meta name='twitter:creator' content='@tomdoestweet' />
