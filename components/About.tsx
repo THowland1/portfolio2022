@@ -77,6 +77,7 @@ export default function About() {
             alt='A picture of Tom Howland, with his lovely fiancée, Alex'
             layout='fill'
             src='/tom-howland.jpg'
+            priority
           />
         </div>
       </div>
