@@ -6,9 +6,9 @@ import ThemeToggle from './ThemeToggle';
 export default function Navbar() {
   return (
     <header className='bg-gray-800 md:sticky top-0 z-10 shadow'>
-      <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
+      <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center gap-5'>
         <Link href='#about' passHref>
-          <span className='title-font font-medium text-white mb-4 md:mb-0'>
+          <span className='title-font font-medium text-white'>
             <span className='text-xl'>Tom Howland</span>
           </span>
         </Link>

@@ -17,7 +17,7 @@ const Footer = () => (
       Made with&nbsp;
       <a href='https://tailwindcss.com/' className='flex items-center h-0'>
         <TailwindcssPlainWordmarkIcon
-          className='text-gray-500 hover:text-gray-900'
+          className='text-gray-500 hover:text-gray-200'
           color='currentColor'
           height={'7rem'}
         />
@@ -26,7 +26,7 @@ const Footer = () => (
       &times;
       <a href='https://nextjs.org/' className='flex items-center h-0'>
         <NextjsPlainWordmarkIcon
-          className='text-gray-500 hover:text-gray-900'
+          className='text-gray-500 hover:text-gray-200'
           color='currentColor'
           height={'4rem'}
         />
