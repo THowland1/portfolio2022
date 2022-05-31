@@ -4,6 +4,14 @@ import Image from 'next/image';
 
 export const projects = [
   {
+    title: 'You Have To Burn The Rope',
+    subtitle: 'HTML Canvas & TS & Parcel',
+    description:
+      'You Have To Burn The Rope, a childhood-favourite Flash game remade from the ground up to run natively in the browser',
+    image: '/youhavetoburntherope.png',
+    link: 'https://youhavetoburntherope.tomhowland.com',
+  },
+  {
     title: 'GUID Generator',
     subtitle: 'Raw HTML & JS',
     description: 'A quick copy-to-clipboard GUID tool',
