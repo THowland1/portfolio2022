@@ -1,6 +1,6 @@
 import { CloudDownloadIcon, PrinterIcon } from '@heroicons/react/outline';
 
-const cvUrl = 'https://files.tomhowland.com/TOM_HOWLAND_20220702.pdf';
+const cvUrl = '/TOM_HOWLAND_20220702.pdf';
 
 const CvPage = () => {
   return (
