@@ -28,6 +28,11 @@ export default function Navbar() {
               Projects
             </span>
           </Link>
+          <Link href='#projects' passHref>
+            <span className='hover:hover:text-white hover:transition-none cursor-pointer'>
+              CV
+            </span>
+          </Link>
           <Link href='#contact' passHref>
             <span className='hover:hover:text-white hover:transition-none cursor-pointer whitespace-nowrap'>
               Get in touch&nbsp;

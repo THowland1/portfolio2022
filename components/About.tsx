@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import TypeAnimation from '../util/TypeAnimation';
+import Link from 'next/link';
 
 async function wait(ms: number) {
   return new Promise<void>((resolve, reject) =>
@@ -63,12 +64,11 @@ export default function About() {
             >
               Get in Touch
             </a>
-            <a
-              href='#projects'
-              className='flex-1 justify-center inline-flex whitespace-nowrap text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-900 rounded text-lg'
-            >
-              See My Work
-            </a>
+            <Link passHref href='/cv'>
+              <span className='flex-1 justify-center inline-flex whitespace-nowrap text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-900 rounded text-lg'>
+                See My CV
+              </span>
+            </Link>
           </div>
         </div>
         <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative h-72'>
