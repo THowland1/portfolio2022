@@ -53,6 +53,7 @@ const CvPage = () => {
             inset: 0,
             width: '100%',
             boxShadow: 'inset 0 0 16px #0006',
+            pointerEvents: 'none',
           }}
         ></div>
         <iframe
