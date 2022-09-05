@@ -4,6 +4,13 @@ import Image from 'next/image';
 
 export const projects = [
   {
+    title: 'Heardlify',
+    subtitle: 'Svelte, SvelteKit, and Serverless Functions',
+    description: `A guessing game for any Spotify playlist! You like The Smiths? Try "This is The Smiths"! You like 80s? Try "All Out 80s"? If you have your own playlist, you can try that too!`,
+    image: '/heardlify.png',
+    link: 'https://heardlify.app',
+  },
+  {
     title: 'You Have To Burn The Rope',
     subtitle: 'HTML Canvas & TS & Parcel',
     description:

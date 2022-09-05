@@ -5,14 +5,14 @@ import React from 'react';
 // import { skills } from '../data';
 
 const skills: string[] = [
-  'React',
-  'NextJS',
+  'React / NextJS',
   'Typescript',
   'C# / .Net',
   'Node',
   'MongoDB',
   'React Native',
   'SQL',
+  'Svelte / SvelteKit',
 ];
 
 export default function Skills() {
