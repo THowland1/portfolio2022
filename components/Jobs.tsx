@@ -14,6 +14,7 @@ import {
   CalculatorIcon,
   SparklesIcon,
   ShareIcon,
+  ClockIcon,
 } from '@heroicons/react/solid';
 import React from 'react';
 import Image from 'next/image';
@@ -47,10 +48,28 @@ const tailwindGreen500 = 'rgb(34 197 94)';
 
 const jobs2 = [
   {
+    title: 'Komi',
+    Icon: BriefcaseIcon,
+    role: 'Full Stack engineer',
+    dates: 'Oct 2022 - Present',
+    stack: [
+      { Icon: TypescriptPlainIcon, name: 'TypeScript' },
+      { Icon: ReactOriginalIcon, name: 'React' },
+    ],
+    description: (
+      <ul>
+        <Li
+          Icon={ClockIcon}
+          text=' I just started, so sit tight while I do things to fill in this section'
+        />
+      </ul>
+    ),
+  },
+  {
     title: 'Boomin',
     Icon: BriefcaseIcon,
     role: 'Full Stack engineer',
-    dates: 'Jul 2021 - Present',
+    dates: 'Jul 2021 - Oct 2022',
     stack: [
       { Icon: TypescriptPlainIcon, name: 'TypeScript' },
       { Icon: ReactOriginalIcon, name: 'React' },
@@ -62,18 +81,18 @@ const jobs2 = [
       <ul>
         <Li
           Icon={DesktopComputerIcon}
-          text='Developing the agent-facing tools of a nationwide property portal'
+          text='Developed the agent-facing tools of a nationwide property portal'
         />
-        <Li Icon={SearchIcon} text='Peer reviewing teammates’ code' />
+        <Li Icon={SearchIcon} text='Peer reviewed teammates’ code' />
         <Li
           Icon={BeakerIcon}
-          text='Strictly adhering to the principles of test-driven development (TDD)'
+          text='Strictly adhered to the principles of test-driven development (TDD)'
         />
 
-        <Li Icon={ShareIcon} text='Working with a microservice architecture' />
+        <Li Icon={ShareIcon} text='Worked with a microservice architecture' />
         <Li
           Icon={UserGroupIcon}
-          text='Working with designers and analysts, turning user stories into code and paticipating in "three amigos" sessions'
+          text='Worked with designers and analysts, turning user stories into code and paticipating in "three amigos" sessions'
         />
       </ul>
     ),
