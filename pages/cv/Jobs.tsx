@@ -15,6 +15,7 @@ import {
   SparklesIcon,
   ShareIcon,
   ClockIcon,
+  ShieldExclamationIcon,
 } from '@heroicons/react/solid';
 import React from 'react';
 import {
@@ -24,6 +25,7 @@ import {
   MatlabPlainIcon,
   MicrosoftsqlserverPlainIcon,
   NextjsOriginalIcon,
+  NodejsOriginalIcon,
   ReactOriginalIcon,
   TypescriptPlainIcon,
 } from 'react-devicons';
@@ -55,12 +57,22 @@ const jobs2 = [
     stack: [
       { Icon: TypescriptPlainIcon, name: 'TypeScript' },
       { Icon: ReactOriginalIcon, name: 'React' },
+      { Icon: NextjsOriginalIcon, name: 'Next.js' },
+      { Icon: NodejsOriginalIcon, name: 'Node.js' },
     ],
     description: (
       <ul>
         <Li
-          Icon={ClockIcon}
-          text=' I just started, so sit tight while I do things to fill in this section'
+          Icon={DesktopComputerIcon}
+          text="Developing a premium landing page builder for the world's top talent"
+        />
+        <Li
+          Icon={UserGroupIcon}
+          text='Running meetings and organising sprints as a scrum master'
+        />
+        <Li
+          Icon={ShieldExclamationIcon}
+          text='Diagnosing and fixing production issues'
         />
       </ul>
     ),
