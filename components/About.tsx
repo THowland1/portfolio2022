@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import TypeAnimation from '../util/TypeAnimation';
 import Link from 'next/link';
+import {
+  MusicNoteIcon,
+} from '@heroicons/react/solid';
 
 async function wait(ms: number) {
   return new Promise<void>((resolve, reject) =>
@@ -70,8 +73,8 @@ export default function About() {
               </span>
             </Link>
             <Link passHref href='https://heardlify.app' >
-              <span onClick={() => {fetch('/walk-the-dog')}} className='flex-1 uppercase font-semibold justify-center inline-flex whitespace-nowrap text-neutral-500 dark:text-white bg-neutral-100 dark:bg-black border-0 py-2 pl-4 pr-6 focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:text-neutral-900 rounded text-md'>
-                <span className='mr-3'>🎵</span> Play Heardlify!
+              <span onClick={() => {fetch('/walk-the-dog')}} className='items-center flex-1 ring-1 ring-white ring-opacity-20 uppercase font-semibold justify-center inline-flex whitespace-nowrap text-white bg-black border-0 py-[.65rem] pl-4 pr-6 focus:outline-none hover:bg-neutral-800  rounded text-md'>
+                <MusicNoteIcon className='w-5 h-5 mr-3' />Play Heardlify!
               </span>
             </Link>
           </div>
