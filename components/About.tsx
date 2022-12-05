@@ -69,6 +69,11 @@ export default function About() {
                 See My CV
               </span>
             </Link>
+            <Link passHref href='https://heardlify.app' >
+              <span onClick={() => {fetch('/walk-the-dog')}} className='flex-1 uppercase font-semibold justify-center inline-flex whitespace-nowrap text-neutral-500 dark:text-white bg-neutral-100 dark:bg-black border-0 py-2 pl-4 pr-6 focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:text-neutral-900 rounded text-md'>
+                <span className='mr-3'>🎵</span> Play Heardlify!
+              </span>
+            </Link>
           </div>
         </div>
         <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative h-72'>

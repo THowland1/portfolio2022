@@ -14,3 +14,8 @@ publish = ".next"
   from = "/pop-the-kettle-on"
   to = "/.netlify/functions/pop-the-kettle-on"
   status = 200
+
+[[redirects]]
+  from = "/walk-the-dog"
+  to = "/.netlify/functions/walk-the-dog"
+  status = 200
