@@ -8,6 +8,7 @@ import Jobs from '../components/Jobs';
 import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
+import Snow from '../components/Snow';
 import Technologies from '../components/Technologies';
 
 const Home: NextPage = () => {
@@ -47,7 +48,9 @@ const Home: NextPage = () => {
 
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
+<div className='absolute inset-0 z-10 pointer-events-none'>
+<Snow />
+</div>
       <main className='text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-900  body-font'>
         <Navbar />
         <About />

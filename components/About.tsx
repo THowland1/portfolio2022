@@ -84,7 +84,7 @@ export default function About() {
             className='object-cover object-center rounded'
             alt='A picture of Tom Howland, with his lovely fiancée, Alex'
             layout='fill'
-            src='/tom-howland.jpg'
+            src='/tom-howland-crimbo.jpg'
             priority
           />
         </div>
