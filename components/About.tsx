@@ -68,14 +68,14 @@ export default function About() {
               Get in Touch
             </a>
             <Link passHref href='/cv'>
-              <span className='flex-1 justify-center inline-flex whitespace-nowrap text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-900 rounded text-lg'>
+              <a className='flex-1 justify-center inline-flex whitespace-nowrap text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-900 rounded text-lg'>
                 See My CV
-              </span>
+              </a>
             </Link>
             <Link passHref href='https://heardlify.app' >
-              <span onClick={() => {fetch('/walk-the-dog')}} className='items-center flex-1 ring-1 ring-white ring-opacity-20 uppercase font-semibold justify-center inline-flex whitespace-nowrap text-white bg-black border-0 py-[.65rem] pl-4 pr-6 focus:outline-none hover:bg-neutral-800  rounded text-md'>
-                <MusicNoteIcon className='w-5 h-5 mr-3' />Play Heardlify!
-              </span>
+              <a onClick={() => {fetch('/walk-the-dog')}} className='items-center flex-1 ring-1 ring-white ring-opacity-20 uppercase font-semibold justify-center inline-flex whitespace-nowrap text-white bg-black border-0 py-[.65rem] pl-4 pr-6 focus:outline-none hover:bg-neutral-800  rounded text-md group'>
+                <MusicNoteIcon className='w-5 h-5 mr-3 group-hover:animate-ping' />Play Heardlify!
+              </a>
             </Link>
           </div>
         </div>
