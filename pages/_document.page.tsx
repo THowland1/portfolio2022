@@ -57,7 +57,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className='relative'>
+        <body>
           <Main />
           <NextScript />
         </body>

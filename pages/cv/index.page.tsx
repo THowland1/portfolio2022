@@ -1,7 +1,7 @@
 import { CloudDownloadIcon, PrinterIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
-const cvUrl = "/TOM_HOWLAND_20220718.pdf";
+const cvUrl = "/TOM_HOWLAND_20221206.pdf";
 
 const CvPage = () => {
   return (

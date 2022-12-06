@@ -26,6 +26,7 @@ import {
   MicrosoftsqlserverPlainIcon,
   NextjsOriginalIcon,
   NodejsOriginalIcon,
+  NodejsPlainIcon,
   ReactOriginalIcon,
   TypescriptPlainIcon,
 } from 'react-devicons';
@@ -58,7 +59,7 @@ const jobs2 = [
       { Icon: TypescriptPlainIcon, name: 'TypeScript' },
       { Icon: ReactOriginalIcon, name: 'React' },
       { Icon: NextjsOriginalIcon, name: 'Next.js' },
-      { Icon: NodejsOriginalIcon, name: 'Node.js' },
+      { Icon: NodejsPlainIcon, name: 'Node.js' },
     ],
     description: (
       <ul>
@@ -195,34 +196,8 @@ const jobs2 = [
           system, resolving issues in a timely and professional manner'
         />
         <Li
-          Icon={PencilIcon}
-          text='Maintained and wrote living specifications and release notes'
-        />
-        <Li
-          Icon={BeakerIcon}
-          text='Performed cross-browser and cross-device manual testing'
-        />
-        <Li
-          Icon={BeakerIcon}
-          text='Adhered to the principles of test-driven development (TDD)'
-        />
-        <Li
           Icon={ShieldCheckIcon}
           text='Adhered to OWASP’s standards of security'
-        />
-        <Li
-          Icon={SearchIcon}
-          text='Peer
-          reviewed teammates’ code'
-        />
-        <Li
-          Icon={UserGroupIcon}
-          text='Worked in an agile, team-based environment, meeting set deadlines'
-        />
-        <Li
-          Icon={StarIcon}
-          text='Achievement: Implemented a script for obtaining the hierarchy of items
-          in a self-referencing SQL table while avoiding infinite loops'
         />
       </ul>
     ),
