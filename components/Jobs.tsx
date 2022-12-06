@@ -14,7 +14,8 @@ import {
   CalculatorIcon,
   SparklesIcon,
   ShareIcon,
-  ClockIcon,
+  ShieldExclamationIcon,
+  ExternalLinkIcon
 } from '@heroicons/react/solid';
 import React from 'react';
 import Image from 'next/image';
@@ -25,9 +26,11 @@ import {
   MatlabPlainIcon,
   MicrosoftsqlserverPlainIcon,
   NextjsOriginalIcon,
+  NodejsOriginalIcon,
   ReactOriginalIcon,
   TypescriptPlainIcon,
 } from 'react-devicons';
+import Link from 'next/link';
 // import { projects } from "../data";
 
 const Li = ({
@@ -48,19 +51,36 @@ const tailwindGreen500 = 'rgb(34 197 94)';
 
 const jobs2 = [
   {
-    title: 'Komi',
+    title: (
+      <Link href="https://komi.io" passHref>
+        <a className="flex items-center hover:underline group">
+          Komi
+          <ExternalLinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
+        </a>
+      </Link>
+    ),
     Icon: BriefcaseIcon,
     role: 'Full Stack engineer',
     dates: 'Oct 2022 - Present',
     stack: [
       { Icon: TypescriptPlainIcon, name: 'TypeScript' },
       { Icon: ReactOriginalIcon, name: 'React' },
+      { Icon: NextjsOriginalIcon, name: 'Next.js' },
+      { Icon: NodejsOriginalIcon, name: 'Node.js' },
     ],
     description: (
       <ul>
         <Li
-          Icon={ClockIcon}
-          text=' I just started, so sit tight while I do things to fill in this section'
+          Icon={DesktopComputerIcon}
+          text="Developing a premium landing page builder for the world's top talent"
+        />
+        <Li
+          Icon={UserGroupIcon}
+          text='Running meetings and organising sprints as a scrum master'
+        />
+        <Li
+          Icon={ShieldExclamationIcon}
+          text='Diagnosing and fixing production issues'
         />
       </ul>
     ),
