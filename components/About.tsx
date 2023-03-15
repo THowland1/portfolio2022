@@ -74,7 +74,7 @@ export default function About() {
             <Link passHref href="https://heardlify.app">
               <a
                 onClick={() => {
-                  fetch("/walk-the-dog");
+                  fetch("/api/walk-the-dog");
                 }}
                 className="items-center flex-1 ring-1 ring-white ring-opacity-20 uppercase font-semibold justify-center inline-flex whitespace-nowrap text-white bg-black border-0 py-[.65rem] pl-4 pr-6 focus:outline-none hover:bg-neutral-800  rounded text-md group"
               >

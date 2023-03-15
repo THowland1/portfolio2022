@@ -32,7 +32,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
               if(!localStorage.kettlePopped) {
-                fetch('/pop-the-kettle-on').then(_ => localStorage.kettlePopped = true)
+                fetch('/api/pop-the-kettle-on').then(_ => localStorage.kettlePopped = true)
                 
               }
           `,

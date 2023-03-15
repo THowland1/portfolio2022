@@ -38,7 +38,7 @@ const textareaClass = `${inputClass} h-32`;
 async function submit(e: FormEvent, data: any) {
   e.preventDefault();
 
-  const response = await fetch("/form-submit", {
+  const response = await fetch("/api/form-submit", {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
