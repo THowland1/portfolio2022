@@ -14,7 +14,7 @@ export default async function handler(
     return res.status(METHOD_NOT_ALLOWED);
   }
 
-  let { name, email, message } = JSON.parse(req.body || "{}");
+  let { name, email, message } = req.body;
   if (
     typeof name !== "string" ||
     typeof email !== "string" ||
