@@ -233,22 +233,28 @@ export default function Contact() {
         </div>
         <div className="flex justify-center gap-4">
           <a
+            title="Email"
             href="mailto:tomhowland9@gmail.com"
             className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#BB011C] text-gray-700 dark:text-white hover:text-white`}
           >
             <MailIcon />
+            <span className="sr-only">Email</span>
           </a>
           <a
+            title="LinkedIn"
             href="https://www.linkedin.com/in/tomhowland9"
             className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#0A66C2] text-gray-700 dark:text-white hover:text-white`}
           >
             <LinkedinLettersIcon />
+            <span className="sr-only">LinkedIn</span>
           </a>
           <a
+            title="GitHub"
             href="https://github.com/THowland1"
             className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#242A2E] text-gray-700 dark:text-white hover:text-white`}
           >
             <GithubIcon />
+            <span className="sr-only">GitHub</span>
           </a>
         </div>
       </div>
