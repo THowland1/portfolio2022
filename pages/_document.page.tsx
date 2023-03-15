@@ -1,6 +1,6 @@
 // pages/_document.js
 
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
@@ -8,8 +8,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link
-            href='https://fonts.googleapis.com/css2?family=Inter&display=swap'
-            rel='stylesheet'
+            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+            rel="stylesheet"
           />
           <script
             async
@@ -39,7 +39,7 @@ class MyDocument extends Document {
             }}
           />
           <script
-            id='darkTheme'
+            id="darkTheme"
             dangerouslySetInnerHTML={{
               __html: `
           function checkDarkTheme() {

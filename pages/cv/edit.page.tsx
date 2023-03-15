@@ -102,7 +102,7 @@ const CvPage = () => {
             <H2>Profile</H2>
             <p>
               {' '}
-              After 4 years of full-time experience and countless evenings of
+              After 5 years of full-time experience and countless evenings of
               hobby-code, I am a full-stack force to be reckoned with on
               projects of all sizes
             </p>
