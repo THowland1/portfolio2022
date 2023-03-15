@@ -2,21 +2,31 @@ const Footer = () => (
   <div className="container lg:max-w-5xl text-sm m-auto py-8 flex flex-col gap-8 px-10 lg:px-40">
     <div className="flex items-center gap-4">
       Made with&nbsp;
-      <a href="https://tailwindcss.com/" className="flex items-center h-0">
+      <a
+        href="https://tailwindcss.com/"
+        className="flex items-center h-0"
+        title="TailwindCSS"
+      >
         <TailwindcssPlainWordmarkIcon
           className="text-gray-500 hover:text-gray-200"
           color="currentColor"
           height={"7rem"}
         />
         &nbsp;
+        <span className="sr-only">TailwindCSS</span>
       </a>
       &times;
-      <a href="https://nextjs.org/" className="flex items-center h-0">
+      <a
+        href="https://nextjs.org/"
+        className="flex items-center h-0"
+        title="NextJS"
+      >
         <NextjsPlainWordmarkIcon
           className="text-gray-500 hover:text-gray-200"
           color="currentColor"
           height={"4rem"}
         />
+        <span className="sr-only">NextJS</span>
       </a>
     </div>
     <div>

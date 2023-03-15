@@ -212,9 +212,9 @@ export default function Jobs() {
               {/* <span className='flex absolute -left-3 justify-center items-center w-6 h-6 bg-green-100  rounded-full'>
                 <job.Icon className='w-4 h-4 text-green-500' />
               </span> */}
-              <h3 className="flex items-center mb-1  font-semibold text-gray-900">
+              <h2 className="flex items-center mb-1  font-semibold text-gray-900">
                 {job.title}
-              </h3>
+              </h2>
               <div className="block mb-2 font-normal leading-none text-gray-500">
                 {job.role}&nbsp;&bull;&nbsp;{job.dates}
               </div>
