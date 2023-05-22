@@ -7,4 +7,4 @@ export { default as NextjsOriginalIcon } from "react-devicons/nextjs/original";
 export { default as NodejsOriginalIcon } from "react-devicons/nodejs/original";
 export { default as NodejsPlainIcon } from "react-devicons/nodejs/plain";
 export { default as ReactOriginalIcon } from "react-devicons/react/original";
-export { default as TypescriptPlainIcon } from "react-devicons/typescript/original";
+export { default as TypescriptPlainIcon } from "react-devicons/typescript/plain";

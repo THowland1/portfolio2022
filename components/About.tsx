@@ -55,7 +55,7 @@ export default function About() {
           </h1>
           <br className="hidden lg:inline-block" />
           <p className="mb-8 leading-relaxed">
-            After 5 years of full-time experience and countless evenings of
+            After 6 years of full-time experience and countless evenings of
             hobby-code, I am a full-stack force to be reckoned with on projects
             of all sizes
           </p>

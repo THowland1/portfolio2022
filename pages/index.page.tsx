@@ -42,7 +42,7 @@ const Home: NextPage = () => {
 
         <meta
           name="twitter:description"
-          content="After 5 years of full-time experience and countless evenings of hobby-code, I am a full-stack force to be reckoned with on projects of all sizes."
+          content="After 6 years of full-time experience and countless evenings of hobby-code, I am a full-stack force to be reckoned with on projects of all sizes."
         />
         <meta name="twitter:image" content="/og-image.png" />
         <meta name="twitter:image:alt" content="Tom Howland" />

@@ -67,13 +67,29 @@ const jobs2 = [
         />
         <Li
           Icon={UserGroupIcon}
-          text="Running meetings and organising sprints as a scrum master"
+          text="Running meetings and organising sprints "
         />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Diagnosing and fixing production issues"
+          text="Integrating with 3rd-parties such as Stripe and Segment"
         />
       </ul>
+    ),
+  },
+  {
+    title: "Trilogy Education Services",
+    Icon: AcademicCapIcon,
+    role: "Teaching Assistant",
+    dates: "Oct 2021 - May 2022",
+    stack: [],
+    description: (
+      <>
+        <p>Assisted in a Zoom-hosted full-stack bootcamp</p>
+        <p>
+          Guided students from zero-to-hero over a part-time (but intense) 6
+          month bootcamp
+        </p>
+      </>
     ),
   },
   {
@@ -108,22 +124,7 @@ const jobs2 = [
       </ul>
     ),
   },
-  {
-    title: "Trilogy Education Services",
-    Icon: AcademicCapIcon,
-    role: "Teaching Assistant",
-    dates: "Oct 2021 - Present",
-    stack: [],
-    description: (
-      <>
-        <p>Assisting in a Zoom-hosted full-stack bootcamp</p>
-        <p>
-          Guiding students from zero-to-hero over a part-time (but intense) 6
-          month bootcamp
-        </p>
-      </>
-    ),
-  },
+
   {
     title: "Depotnet",
     Icon: BriefcaseIcon,

@@ -1,9 +1,14 @@
 import { CloudDownloadIcon, PrinterIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import { useState } from "react";
 
-const cvUrl = "/TOM_HOWLAND_20221206.pdf";
+const cvUrl = "/TOM_HOWLAND_20230522.pdf";
 
 const CvPage = () => {
+  const [todayDatestamp] = useState(() => {
+    const now = new Date();
+    return now.toISOString().substring(0, 10).replace(/-/g, "");
+  });
   return (
     <div className="bg-slate-700 absolute inset-0 flex justify-center flex-col gap-6 p-8">
       <div className="flex  gap-4 flex-col sm:flex-row">
@@ -31,7 +36,7 @@ const CvPage = () => {
 
           <a
             href={cvUrl}
-            download
+            download={`TOM_HOWLAND_${todayDatestamp}.pdf`}
             className="flex-1  pl-4 items-center justify-center inline-flex whitespace-nowrap text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
           >
             <CloudDownloadIcon className="w-4 h-4 my-1 mr-3 inline text-white" />
