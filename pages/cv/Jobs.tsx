@@ -49,10 +49,47 @@ const tailwindGreen500 = "rgb(34 197 94)";
 
 const jobs2 = [
   {
+    title: "MoveGenius",
+    Icon: BriefcaseIcon,
+    role: "Senior developer",
+    dates: "Jul 2023 - Present",
+    stack: [
+      { Icon: TypescriptPlainIcon, name: "TypeScript" },
+      { Icon: ReactOriginalIcon, name: "React" },
+      { Icon: NextjsOriginalIcon, name: "Next.js" },
+      { Icon: NodejsPlainIcon, name: "Node.js" },
+      { Icon: DotnetcorePlainIcon, name: ".NET" },
+    ],
+    description: (
+      <ul>
+        <Li
+          Icon={DesktopComputerIcon}
+          text="Developing a platform to accelerate property sales for estate agents and sellers "
+        />
+        <Li
+          Icon={UserGroupIcon}
+          text="Planning and estimating engineering projects, working directly with management"
+        />
+        <Li
+          Icon={ShieldExclamationIcon}
+          text="Integrating with government and commercial APIs"
+        />
+        <Li
+          Icon={ShieldExclamationIcon}
+          text="Maintaining the design system / component library"
+        />
+        <Li
+          Icon={ShieldExclamationIcon}
+          text="Fixing live bugs and responsing to live customer requests"
+        />
+      </ul>
+    ),
+  },
+  {
     title: "Komi",
     Icon: BriefcaseIcon,
     role: "Full Stack engineer",
-    dates: "Oct 2022 - Present",
+    dates: "Oct 2022 - Jul 2023",
     stack: [
       { Icon: TypescriptPlainIcon, name: "TypeScript" },
       { Icon: ReactOriginalIcon, name: "React" },
@@ -63,15 +100,12 @@ const jobs2 = [
       <ul>
         <Li
           Icon={DesktopComputerIcon}
-          text="Developing a premium landing page builder for the world's top talent"
+          text="Developed a premium landing page builder for the world's top talent"
         />
-        <Li
-          Icon={UserGroupIcon}
-          text="Running meetings and organising sprints "
-        />
+        <Li Icon={UserGroupIcon} text="Ran meetings and organised sprints" />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Integrating with 3rd-parties such as Stripe and Segment"
+          text="Integrated with 3rd-parties such as Stripe and Segment"
         />
       </ul>
     ),
@@ -141,10 +175,9 @@ const jobs2 = [
       <ul>
         <Li
           Icon={DesktopComputerIcon}
-          text="Developed civil engineering management systems for top UK companies"
+          text="Developed civil engineering management systems for leading UK companies"
         />
-        <Li Icon={SearchIcon} text="Peer reviewed teammates’ code" />
-        <Li
+        {/* <Li
           Icon={UserIcon}
           text="Architected entire projects and sub-projects to work with existing
           solutions"
@@ -162,7 +195,7 @@ const jobs2 = [
           Icon={StarIcon}
           text="Achievement: Implemented a data warehouse with an API to allow clients
           to integrate their data into their own BI platforms"
-        />
+        /> */}
       </ul>
     ),
   },
@@ -184,7 +217,7 @@ const jobs2 = [
           Icon={DesktopComputerIcon}
           text="Developed bespoke internal systems and SaaS products for leading UK companies"
         />
-        <Li
+        {/* <Li
           Icon={BookOpenIcon}
           text="Worked towards client specifications and in-house public API
           specifications"
@@ -197,7 +230,7 @@ const jobs2 = [
         <Li
           Icon={ShieldCheckIcon}
           text="Adhered to OWASP’s standards of security"
-        />
+        /> */}
       </ul>
     ),
   },
@@ -209,7 +242,7 @@ export default function Jobs() {
       <div className="relative">
         <ol>
           {jobs2.map((job, index) => (
-            <li className="mb-10  last:mb-0" key={index}>
+            <li className="mb-9  last:mb-0" key={index}>
               {/* <span className='flex absolute -left-3 justify-center items-center w-6 h-6 bg-green-100  rounded-full'>
                 <job.Icon className='w-4 h-4 text-green-500' />
               </span> */}

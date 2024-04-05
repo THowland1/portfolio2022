@@ -1,12 +1,5 @@
-import {
-  HomeIcon,
-  PhoneIcon,
-  GlobeAltIcon,
-  MailIcon,
-  MailOpenIcon,
-} from "@heroicons/react/outline";
+import { PhoneIcon, GlobeAltIcon, MailIcon } from "@heroicons/react/outline";
 import Head from "next/head";
-import Image from "next/image";
 import { FC, PropsWithChildren } from "react";
 import Jobs from "./Jobs";
 
@@ -109,7 +102,7 @@ const CvPage = () => {
           </div> */}
           <div className="bg-slate-700 text-white p-4">
             <div className="text-4xl"> Tom Howland</div>
-            <div className="text-2xl">Full-Stack Software Engineer</div>
+            <div className="text-2xl">Senior Full-Stack Software Engineer</div>
           </div>
         </div>
         <div className="p-4">

@@ -16,6 +16,8 @@ import {
   ShareIcon,
   ShieldExclamationIcon,
   ExternalLinkIcon,
+  PuzzleIcon,
+  LightningBoltIcon,
 } from "@heroicons/react/solid";
 import React from "react";
 import Image from "next/image";
@@ -52,6 +54,50 @@ const tailwindGreen500 = "rgb(34 197 94)";
 const jobs2 = [
   {
     title: (
+      <Link href="https://movegenius.com" passHref>
+        <a className="flex items-center hover:underline group">
+          MoveGenius
+          <ExternalLinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
+        </a>
+      </Link>
+    ),
+    Icon: BriefcaseIcon,
+    role: "Senior developer",
+    dates: "Jul 2023 - Present",
+    stack: [
+      { Icon: TypescriptPlainIcon, name: "TypeScript" },
+      { Icon: ReactOriginalIcon, name: "React" },
+      { Icon: NextjsOriginalIcon, name: "Next.js" },
+      { Icon: NodejsPlainIcon, name: "Node.js" },
+      { Icon: DotnetcorePlainIcon, name: ".NET" },
+    ],
+    description: (
+      <ul>
+        <Li
+          Icon={DesktopComputerIcon}
+          text="Developing a platform to accelerate property sales for estate agents and sellers "
+        />
+        <Li
+          Icon={UserGroupIcon}
+          text="Planning and estimating engineering projects, working directly with management"
+        />
+        <Li
+          Icon={ShareIcon}
+          text="Integrating with government and commercial APIs"
+        />
+        <Li
+          Icon={PuzzleIcon}
+          text="Maintaining the design system / component library"
+        />
+        <Li
+          Icon={LightningBoltIcon}
+          text="Fixing live bugs and responsing to live customer requests"
+        />
+      </ul>
+    ),
+  },
+  {
+    title: (
       <Link href="https://komi.io" passHref>
         <a className="flex items-center hover:underline group">
           Komi
@@ -61,7 +107,7 @@ const jobs2 = [
     ),
     Icon: BriefcaseIcon,
     role: "Full Stack engineer",
-    dates: "Oct 2022 - Present",
+    dates: "Oct 2022 - Jul 2023",
     stack: [
       { Icon: TypescriptPlainIcon, name: "TypeScript" },
       { Icon: ReactOriginalIcon, name: "React" },
@@ -72,15 +118,12 @@ const jobs2 = [
       <ul>
         <Li
           Icon={DesktopComputerIcon}
-          text="Developing a premium landing page builder for the world's top talent"
+          text="Developed a premium landing page builder for the world's top talent"
         />
+        <Li Icon={UserGroupIcon} text="Ran meetings and organised sprints" />
         <Li
-          Icon={UserGroupIcon}
-          text="Running meetings and organising sprints "
-        />
-        <Li
-          Icon={ShieldExclamationIcon}
-          text="Integrating with 3rd-parties such as Stripe and Segment"
+          Icon={PuzzleIcon}
+          text="Integrated with 3rd-parties such as Stripe and Segment"
         />
       </ul>
     ),
