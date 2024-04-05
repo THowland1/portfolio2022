@@ -75,11 +75,11 @@ const jobs2 = [
       <ul>
         <Li
           Icon={DesktopComputerIcon}
-          text="Developing a platform to accelerate property sales for estate agents and sellers "
+          text="Developing a platform to expedite property sales for estate agents and sellers"
         />
         <Li
           Icon={UserGroupIcon}
-          text="Planning and estimating engineering projects, working directly with management"
+          text="Collaborating with management on planning and estimating engineering projects"
         />
         <Li
           Icon={ShareIcon}
@@ -87,11 +87,11 @@ const jobs2 = [
         />
         <Li
           Icon={PuzzleIcon}
-          text="Maintaining the design system / component library"
+          text="Managing and updating the design system/component library"
         />
         <Li
           Icon={LightningBoltIcon}
-          text="Fixing live bugs and responsing to live customer requests"
+          text="Resolving live bugs and addressing customer requests in real-time"
         />
       </ul>
     ),

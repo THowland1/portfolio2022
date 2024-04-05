@@ -1,21 +1,12 @@
 import {
+  AcademicCapIcon,
+  BeakerIcon,
   BriefcaseIcon,
   DesktopComputerIcon,
-  BookOpenIcon,
-  ChatIcon,
-  PencilIcon,
-  BeakerIcon,
-  ShieldCheckIcon,
   SearchIcon,
-  UserGroupIcon,
-  StarIcon,
-  UserIcon,
-  AcademicCapIcon,
-  CalculatorIcon,
-  SparklesIcon,
   ShareIcon,
-  ClockIcon,
   ShieldExclamationIcon,
+  UserGroupIcon,
 } from "@heroicons/react/solid";
 import React from "react";
 import {
@@ -24,9 +15,9 @@ import {
   DotnetcorePlainIcon,
   MicrosoftsqlserverPlainIcon,
   NextjsOriginalIcon,
+  NodejsPlainIcon,
   ReactOriginalIcon,
   TypescriptPlainIcon,
-  NodejsPlainIcon,
 } from "../../util/dev-icons";
 // import { projects } from "../data";
 
@@ -64,11 +55,11 @@ const jobs2 = [
       <ul>
         <Li
           Icon={DesktopComputerIcon}
-          text="Developing a platform to accelerate property sales for estate agents and sellers "
+          text="Developing a platform to expedite property sales for estate agents and sellers"
         />
         <Li
           Icon={UserGroupIcon}
-          text="Planning and estimating engineering projects, working directly with management"
+          text="Collaborating with management on planning and estimating engineering projects"
         />
         <Li
           Icon={ShieldExclamationIcon}
@@ -76,11 +67,11 @@ const jobs2 = [
         />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Maintaining the design system / component library"
+          text="Managing and updating the design system/component library"
         />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Fixing live bugs and responsing to live customer requests"
+          text="Resolving live bugs and addressing customer requests in real-time"
         />
       </ul>
     ),
