@@ -1,4 +1,8 @@
-import { GlobeAltIcon, MailIcon, PhoneIcon } from "@heroicons/react/outline";
+import {
+  EnvelopeIcon,
+  GlobeAltIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
 import Head from "next/head";
 import { FC, PropsWithChildren } from "react";
 import Jobs from "./Jobs";
@@ -76,7 +80,7 @@ const CvPage = () => {
           <H2>Contact</H2>
 
           <div className="flex">
-            <MailIcon className="w-4 h-4 my-1 mr-2 inline " />
+            <EnvelopeIcon className="w-4 h-4 my-1 mr-2 inline " />
             <div className="flex-1">tomhowland9@gmail.com</div>
           </div>
           <div className="flex">

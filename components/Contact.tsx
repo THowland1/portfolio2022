@@ -1,11 +1,11 @@
 import React, { FormEvent, useState } from "react";
 
 import {
-  ChatIcon,
+  ChatBubbleLeftIcon,
   CheckCircleIcon,
+  EnvelopeIcon,
   ExclamationCircleIcon,
-  MailIcon,
-} from "@heroicons/react/solid";
+} from "@heroicons/react/24/solid";
 const inputClass = `
   w-full
   rounded
@@ -80,7 +80,7 @@ export default function Contact() {
             name="contact"
             className="flex flex-col md:m-auto w-full md:py-8 mt-8 md:mt-0"
           >
-            <ChatIcon className="mx-auto inline-block w-10 mb-4" />
+            <ChatBubbleLeftIcon className="mx-auto inline-block w-10 mb-4" />
             <h2 className="text-gray-900 dark:text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
               Get in touch!
             </h2>
@@ -237,7 +237,7 @@ export default function Contact() {
             href="mailto:tomhowland9@gmail.com"
             className={`w-12 h-12 p-2 transition-transform rounded-full border-gray-300 dark:border-white border hover:scale-110  inline-block hover:bg-[#BB011C] text-gray-700 dark:text-white hover:text-white`}
           >
-            <MailIcon />
+            <EnvelopeIcon />
             <span className="sr-only">Email</span>
           </a>
           <a

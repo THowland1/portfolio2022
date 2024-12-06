@@ -1,26 +1,27 @@
 import {
-  BriefcaseIcon,
-  DesktopComputerIcon,
-  BookOpenIcon,
-  ChatIcon,
-  PencilIcon,
-  BeakerIcon,
-  ShieldCheckIcon,
-  SearchIcon,
-  UserGroupIcon,
-  StarIcon,
-  UserIcon,
   AcademicCapIcon,
+  BeakerIcon,
+  BoltIcon,
+  BookOpenIcon,
+  BriefcaseIcon,
   CalculatorIcon,
-  SparklesIcon,
+  ChatBubbleLeftIcon,
+  ComputerDesktopIcon,
+  FlagIcon,
+  LinkIcon,
+  MagnifyingGlassIcon,
+  PencilIcon,
+  PuzzlePieceIcon,
   ShareIcon,
-  ShieldExclamationIcon,
-  ExternalLinkIcon,
-  PuzzleIcon,
-  LightningBoltIcon,
-} from "@heroicons/react/solid";
+  ShieldCheckIcon,
+  SparklesIcon,
+  StarIcon,
+  TrophyIcon,
+  UserGroupIcon,
+  UserIcon,
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import {
   AngularjsPlainIcon,
   AzurePlainIcon,
@@ -31,15 +32,15 @@ import {
   NodejsPlainIcon,
   ReactOriginalIcon,
   TypescriptPlainIcon,
+  VuejsPlainIcon,
 } from "../util/dev-icons";
-import Link from "next/link";
 // import { projects } from "../data";
 
 const Li = ({
   Icon,
   text,
 }: {
-  Icon: (props: React.ComponentProps<"svg">) => JSX.Element;
+  Icon: typeof AcademicCapIcon;
   text: React.ReactNode;
 }) => (
   <li className="my-2 flex">
@@ -54,16 +55,51 @@ const tailwindGreen500 = "rgb(34 197 94)";
 const jobs2 = [
   {
     title: (
+      <Link href="https://jigsawcreate.com" passHref>
+        <a className="flex items-center hover:underline group">
+          Jigsaw
+          <LinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
+        </a>
+      </Link>
+    ),
+    Icon: BriefcaseIcon,
+    role: "Full-stack developer",
+    dates: "Jul 2024 - Present",
+    stack: [
+      { Icon: TypescriptPlainIcon, name: "TypeScript" },
+      { Icon: VuejsPlainIcon, name: "Vue.js" },
+      { Icon: DotnetcorePlainIcon, name: ".NET" },
+    ],
+    description: (
+      <ul>
+        <Li
+          Icon={ComputerDesktopIcon}
+          text="Developing a diagramming tool for the UKs top law and accountancy firms"
+        />
+        <Li
+          Icon={TrophyIcon}
+          text="Championing unit tests in both the frontend and backend"
+        />
+        <Li Icon={FlagIcon} text="Developed the feature flagging system" />
+        <Li
+          Icon={ShareIcon}
+          text="Created a tool for parsing and processing Microsoft Office files"
+        />
+      </ul>
+    ),
+  },
+  {
+    title: (
       <Link href="https://movegenius.com" passHref>
         <a className="flex items-center hover:underline group">
           MoveGenius
-          <ExternalLinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
+          <LinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
         </a>
       </Link>
     ),
     Icon: BriefcaseIcon,
     role: "Senior developer",
-    dates: "Jul 2023 - Present",
+    dates: "Jul 2023 - Jun 2024",
     stack: [
       { Icon: TypescriptPlainIcon, name: "TypeScript" },
       { Icon: ReactOriginalIcon, name: "React" },
@@ -74,24 +110,24 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
-          text="Developing a platform to expedite property sales for estate agents and sellers"
+          Icon={ComputerDesktopIcon}
+          text="Developed a platform to expedite property sales for estate agents and sellers"
         />
         <Li
           Icon={UserGroupIcon}
-          text="Collaborating with management on planning and estimating engineering projects"
+          text="Worked closely with management on planning and estimating engineering projects"
         />
         <Li
           Icon={ShareIcon}
-          text="Integrating with government and commercial APIs"
+          text="Integrated with government and commercial APIs"
         />
         <Li
-          Icon={PuzzleIcon}
-          text="Managing and updating the design system/component library"
+          Icon={PuzzlePieceIcon}
+          text="Managed the design system/component library"
         />
         <Li
-          Icon={LightningBoltIcon}
-          text="Resolving live bugs and addressing customer requests in real-time"
+          Icon={BoltIcon}
+          text="Resolved live bugs and addressed customer requests in real-time"
         />
       </ul>
     ),
@@ -101,7 +137,7 @@ const jobs2 = [
       <Link href="https://komi.io" passHref>
         <a className="flex items-center hover:underline group">
           Komi
-          <ExternalLinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
+          <LinkIcon className="w-4 h-4 text-gray-500 ml-1 group-hover:text-green-500 dark:group-hover:text-green-700 scale-100 group-hover:scale-110 transition-none" />
         </a>
       </Link>
     ),
@@ -117,12 +153,12 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
+          Icon={ComputerDesktopIcon}
           text="Developed a premium landing page builder for the world's top talent"
         />
         <Li Icon={UserGroupIcon} text="Ran meetings and organised sprints" />
         <Li
-          Icon={PuzzleIcon}
+          Icon={PuzzlePieceIcon}
           text="Integrated with 3rd-parties such as Stripe and Segment"
         />
       </ul>
@@ -159,10 +195,10 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
+          Icon={ComputerDesktopIcon}
           text="Developed the agent-facing tools of a nationwide property portal"
         />
-        <Li Icon={SearchIcon} text="Peer reviewed teammates’ code" />
+        <Li Icon={MagnifyingGlassIcon} text="Peer reviewed teammates’ code" />
         <Li
           Icon={BeakerIcon}
           text="Strictly adhered to the principles of test-driven development (TDD)"
@@ -191,10 +227,10 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
+          Icon={ComputerDesktopIcon}
           text="Developed civil engineering management systems for top UK companies"
         />
-        <Li Icon={SearchIcon} text="Peer reviewed teammates’ code" />
+        <Li Icon={MagnifyingGlassIcon} text="Peer reviewed teammates’ code" />
         <Li
           Icon={UserIcon}
           text="Architected entire projects and sub-projects to work with existing
@@ -232,7 +268,7 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
+          Icon={ComputerDesktopIcon}
           text="Developed bespoke internal systems and SaaS products for leading UK companies"
         />
         <Li
@@ -241,7 +277,7 @@ const jobs2 = [
           specifications"
         />
         <Li
-          Icon={ChatIcon}
+          Icon={ChatBubbleLeftIcon}
           text="Interacted with live clients/UAT users via a helpdesk ticketing
           system, resolving issues in a timely and professional manner"
         />
@@ -262,7 +298,7 @@ const jobs2 = [
           text="Adhered to OWASP’s standards of security"
         />
         <Li
-          Icon={SearchIcon}
+          Icon={MagnifyingGlassIcon}
           text="Peer
           reviewed teammates’ code"
         />

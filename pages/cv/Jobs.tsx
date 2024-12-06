@@ -2,22 +2,23 @@ import {
   AcademicCapIcon,
   BeakerIcon,
   BriefcaseIcon,
-  DesktopComputerIcon,
-  SearchIcon,
+  ComputerDesktopIcon,
+  FlagIcon,
+  MagnifyingGlassIcon,
   ShareIcon,
   ShieldExclamationIcon,
+  TrophyIcon,
   UserGroupIcon,
-} from "@heroicons/react/solid";
+} from "@heroicons/react/24/solid";
 import React from "react";
 import {
-  AngularjsPlainIcon,
   AzurePlainIcon,
   DotnetcorePlainIcon,
-  MicrosoftsqlserverPlainIcon,
   NextjsOriginalIcon,
   NodejsPlainIcon,
   ReactOriginalIcon,
   TypescriptPlainIcon,
+  VuejsPlainIcon,
 } from "../../util/dev-icons";
 // import { projects } from "../data";
 
@@ -25,7 +26,7 @@ const Li = ({
   Icon,
   text,
 }: {
-  Icon: (props: React.ComponentProps<"svg">) => JSX.Element;
+  Icon: typeof BriefcaseIcon;
   text: React.ReactNode;
 }) => (
   <li className="my-1 flex">
@@ -39,6 +40,34 @@ const tailwindGreen500 = "rgb(34 197 94)";
 // TODO - dont import all heroicons
 
 const jobs2 = [
+  {
+    title: "Jigsaw",
+    Icon: BriefcaseIcon,
+    role: "Full-stack developer",
+    dates: "Jul 2024 - Present",
+    stack: [
+      { Icon: TypescriptPlainIcon, name: "TypeScript" },
+      { Icon: VuejsPlainIcon, name: "Vue.js" },
+      { Icon: DotnetcorePlainIcon, name: ".NET" },
+    ],
+    description: (
+      <ul>
+        <Li
+          Icon={ComputerDesktopIcon}
+          text="Developing a diagramming tool for the UKs top law and accountancy firms"
+        />
+        <Li
+          Icon={TrophyIcon}
+          text="Championing unit tests in both the frontend and backend"
+        />
+        <Li Icon={FlagIcon} text="Developed the feature flagging system" />
+        <Li
+          Icon={ShareIcon}
+          text="Created a tool for parsing and processing Microsoft Office files"
+        />
+      </ul>
+    ),
+  },
   {
     title: "MoveGenius",
     Icon: BriefcaseIcon,
@@ -54,24 +83,24 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
-          text="Developing a platform to expedite property sales for estate agents and sellers"
+          Icon={ComputerDesktopIcon}
+          text="Developed a platform to expedite property sales for estate agents and sellers"
         />
         <Li
           Icon={UserGroupIcon}
-          text="Collaborating with management on planning and estimating engineering projects"
+          text="Worked closely with management on planning and estimating engineering projects"
         />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Integrating with government and commercial APIs"
+          text="Integrated with government and commercial APIs"
         />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Managing and updating the design system/component library"
+          text="Managed the design system/component library"
         />
         <Li
           Icon={ShieldExclamationIcon}
-          text="Resolving live bugs and addressing customer requests in real-time"
+          text="Resolved live bugs and addressed customer requests in real-time"
         />
       </ul>
     ),
@@ -90,7 +119,7 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
+          Icon={ComputerDesktopIcon}
           text="Developed a premium landing page builder for the world's top talent"
         />
         <Li Icon={UserGroupIcon} text="Ran meetings and organised sprints" />
@@ -132,10 +161,10 @@ const jobs2 = [
     description: (
       <ul>
         <Li
-          Icon={DesktopComputerIcon}
+          Icon={ComputerDesktopIcon}
           text="Developed the agent-facing tools of a nationwide property portal"
         />
-        <Li Icon={SearchIcon} text="Peer reviewed teammates’ code" />
+        <Li Icon={MagnifyingGlassIcon} text="Peer reviewed teammates’ code" />
         <Li
           Icon={BeakerIcon}
           text="Strictly adhered to the principles of test-driven development (TDD)"
@@ -151,79 +180,12 @@ const jobs2 = [
   },
 
   {
-    title: "Depotnet",
+    title: "Previous roles",
     Icon: BriefcaseIcon,
-    role: "Full-Stack Software Engineer",
-    dates: "Feb 2020 - Jul 2021",
-    stack: [
-      { Icon: TypescriptPlainIcon, name: "TypeScript" },
-      { Icon: AngularjsPlainIcon, name: "Angular" },
-      { Icon: DotnetcorePlainIcon, name: ".NET" },
-      { Icon: MicrosoftsqlserverPlainIcon, name: "SQL" },
-      { Icon: AzurePlainIcon, name: "Azure DevOps" },
-    ],
-    description: (
-      <ul>
-        <Li
-          Icon={DesktopComputerIcon}
-          text="Developed civil engineering management systems for leading UK companies"
-        />
-        {/* <Li
-          Icon={UserIcon}
-          text="Architected entire projects and sub-projects to work with existing
-          solutions"
-        />
-        <Li
-          Icon={AcademicCapIcon}
-          text="Gave talks on potential tooling within weekly developer meetings"
-        />
-        <Li
-          Icon={UserGroupIcon}
-          text="Worked closely with business analysts to create exactly what the
-          users need"
-        />
-        <Li
-          Icon={StarIcon}
-          text="Achievement: Implemented a data warehouse with an API to allow clients
-          to integrate their data into their own BI platforms"
-        /> */}
-      </ul>
-    ),
-  },
-  {
-    title: "Enable",
-    Icon: BriefcaseIcon,
-    role: "Full-Stack Software Engineer",
-    stack: [
-      { Icon: TypescriptPlainIcon, name: "TypeScript" },
-      { Icon: AngularjsPlainIcon, name: "Angular" },
-      { Icon: DotnetcorePlainIcon, name: ".NET" },
-      { Icon: MicrosoftsqlserverPlainIcon, name: "SQL" },
-      { Icon: AzurePlainIcon, name: "Azure DevOps" },
-    ],
-    dates: "Oct 2017 - Feb 2020",
-    description: (
-      <ul>
-        <Li
-          Icon={DesktopComputerIcon}
-          text="Developed bespoke internal systems and SaaS products for leading UK companies"
-        />
-        {/* <Li
-          Icon={BookOpenIcon}
-          text="Worked towards client specifications and in-house public API
-          specifications"
-        />
-        <Li
-          Icon={ChatIcon}
-          text="Interacted with live clients/UAT users via a helpdesk ticketing
-          system, resolving issues in a timely and professional manner"
-        />
-        <Li
-          Icon={ShieldCheckIcon}
-          text="Adhered to OWASP’s standards of security"
-        /> */}
-      </ul>
-    ),
+    role: "Full-stack Software Engineer",
+    dates: "Oct 2017 - Jul 2021",
+    stack: [],
+    description: null,
   },
 ];
 

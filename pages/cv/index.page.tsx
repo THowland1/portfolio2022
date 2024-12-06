@@ -1,4 +1,4 @@
-import { CloudDownloadIcon, PrinterIcon } from "@heroicons/react/outline";
+import { CloudArrowDownIcon, PrinterIcon } from "@heroicons/react/24/outline";
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
@@ -44,7 +44,7 @@ const CvPage = () => {
               download={`TOM_HOWLAND_${todayDatestamp}.pdf`}
               className="flex-1  pl-4 items-center justify-center inline-flex whitespace-nowrap text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
             >
-              <CloudDownloadIcon className="w-4 h-4 my-1 mr-3 inline text-white" />
+              <CloudArrowDownIcon className="w-4 h-4 my-1 mr-3 inline text-white" />
               Download
             </a>
           </div>

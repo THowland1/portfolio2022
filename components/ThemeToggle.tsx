@@ -1,5 +1,5 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/solid";
-import React, { useEffect, useState } from "react";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { useEffect, useState } from "react";
 
 const setDark = () => {
   localStorage.theme = "dark";
