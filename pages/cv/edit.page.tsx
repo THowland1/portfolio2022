@@ -1,4 +1,4 @@
-import { PhoneIcon, GlobeAltIcon, MailIcon } from "@heroicons/react/outline";
+import { GlobeAltIcon, MailIcon, PhoneIcon } from "@heroicons/react/outline";
 import Head from "next/head";
 import { FC, PropsWithChildren } from "react";
 import Jobs from "./Jobs";
@@ -95,7 +95,7 @@ const CvPage = () => {
             <H2>Profile</H2>
             <p>
               {' '}
-              After 6 years of full-time experience and countless evenings of
+              After 7 years of full-time experience and countless evenings of
               hobby-code, I am a full-stack force to be reckoned with on
               projects of all sizes
             </p>

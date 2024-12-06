@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import TypeAnimation from "../util/TypeAnimation";
-import Link from "next/link";
 import { MusicNoteIcon } from "@heroicons/react/solid";
+import Image from "next/image";
+import Link from "next/link";
 import { isDecember } from "../util/is-december";
+import TypeAnimation from "../util/TypeAnimation";
 
 async function wait(ms: number) {
   return new Promise<void>((resolve, reject) =>
@@ -55,7 +54,7 @@ export default function About() {
           </h1>
           <br className="hidden lg:inline-block" />
           <p className="mb-8 leading-relaxed">
-            After 6 years of full-time experience and countless evenings of
+            After 7 years of full-time experience and countless evenings of
             hobby-code, I am a full-stack force to be reckoned with on projects
             of all sizes
           </p>
