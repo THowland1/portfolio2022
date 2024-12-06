@@ -1,5 +1,4 @@
 import { ArrowRightIcon, CodeIcon } from "@heroicons/react/solid";
-import React from "react";
 import Image from "next/image";
 
 export const projects = [
@@ -7,9 +6,9 @@ export const projects = [
     title: (
       <span className="flex justify-center items-center">
         Mic Check{" "}
-        <span className="ml-2 bg-green-600 px-[6px] py-[0px] text-xs rounded-full relative ring-2 ring-green-500 text-white">
+        {/* <span className="ml-2 bg-green-600 px-[6px] py-[0px] text-xs rounded-full relative ring-2 ring-green-500 text-white">
           New for 2023
-        </span>
+        </span> */}
       </span>
     ),
     subtitle: "Svelte, Sveltekit & web-native audio APIs",
