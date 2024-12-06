@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
-const cvUrl = "/TOM_HOWLAND_20240405.pdf";
+const cvUrl = "/TOM_HOWLAND_20241206.pdf";
 
 const CvPage = () => {
   const [todayDatestamp] = useState(() => {

@@ -54,7 +54,7 @@ const jobs2 = [
       <ul>
         <Li
           Icon={ComputerDesktopIcon}
-          text="Developing a diagramming tool for the UKs top law and accountancy firms"
+          text="Developing a diagramming tool for the UK's top law and accountancy firms"
         />
         <Li
           Icon={TrophyIcon}
@@ -72,7 +72,7 @@ const jobs2 = [
     title: "MoveGenius",
     Icon: BriefcaseIcon,
     role: "Senior developer",
-    dates: "Jul 2023 - Present",
+    dates: "Jul 2023 - Jun 2024",
     stack: [
       { Icon: TypescriptPlainIcon, name: "TypeScript" },
       { Icon: ReactOriginalIcon, name: "React" },

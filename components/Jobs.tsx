@@ -74,7 +74,7 @@ const jobs2 = [
       <ul>
         <Li
           Icon={ComputerDesktopIcon}
-          text="Developing a diagramming tool for the UKs top law and accountancy firms"
+          text="Developing a diagramming tool for the UK's top law and accountancy firms"
         />
         <Li
           Icon={TrophyIcon}

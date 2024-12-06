@@ -10,15 +10,16 @@ import Jobs from "./Jobs";
 const width = "17rem";
 const topheight = "2.3cm";
 
-const skills: string[] = [
-  "React",
-  "NextJS",
-  "Typescript",
-  "C# / .Net",
-  "Node",
-  "MongoDB",
-  "React Native",
-  "SQL",
+type Skill = { name: string; duration: string | null };
+const skills: Skill[] = [
+  { name: "React", duration: "4 years" },
+  { name: "NextJS", duration: "4 years" },
+  { name: "Typescript", duration: "7 years" },
+  { name: "C# / .Net", duration: "6 years" },
+  { name: "Node", duration: "4 years" },
+  { name: "SQL", duration: "5 years" },
+  { name: "MongoDB", duration: "Hobby projects" },
+  { name: "React Native", duration: "Hobby projects" },
 ];
 
 const H2: FC<PropsWithChildren<{}>> = ({ children }) => {
@@ -63,7 +64,10 @@ const CvPage = () => {
 
           {skills.map((skill, i) => (
             <div className="py-1" key={i}>
-              {skill}
+              {skill.name}{" "}
+              {skill.duration ? (
+                <span className="opacity-50">{skill.duration}</span>
+              ) : null}
             </div>
           ))}
         </div>
