@@ -5,6 +5,9 @@ package = "@netlify/plugin-nextjs"
 command = "yarn next build"
 publish = ".next"
 
+[build.environment]
+NODE_VERSION = "24"
+
 [[redirects]]
   from = "/form-submit"
   to = "/.netlify/functions/form-submit"
