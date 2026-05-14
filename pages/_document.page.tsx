@@ -7,6 +7,16 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="dark">
         <Head>
+          {/*
+           * Tells iOS / Safari (and other browsers that honour theme-color)
+           * what colour to bleed under floating chrome like the iOS 26
+           * Liquid Glass status bar / home indicator. Defaults to the
+           * dark `bg-gray-900` because `<Html>` defaults to the `dark`
+           * class; the inline script below keeps it in sync with the
+           * theme actually applied (and ThemeToggle does the same when
+           * the user flips the switch at runtime).
+           */}
+          <meta name="theme-color" content="#111827" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
             rel="stylesheet"
@@ -44,13 +54,17 @@ class MyDocument extends Document {
               __html: `
           function checkDarkTheme() {
 
-            if (localStorage.theme === 'light') {
+            var isLight = localStorage.theme === 'light';
+            if (isLight) {
               document.documentElement.classList.remove('dark')
             } else {
               document.documentElement.classList.add('dark')
             }
-            
-            
+
+            var themeColor = document.querySelector('meta[name="theme-color"]');
+            if (themeColor) {
+              themeColor.setAttribute('content', isLight ? '#f3f4f6' : '#111827');
+            }
           }
           checkDarkTheme()
           `,
