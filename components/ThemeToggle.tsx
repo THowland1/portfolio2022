@@ -1,13 +1,22 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
+import { DARK_THEME_COLOR, LIGHT_THEME_COLOR } from "../util/theme-colors";
+
+const setThemeColor = (color: string) => {
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute("content", color);
+};
 
 const setDark = () => {
   localStorage.theme = "dark";
   document.documentElement.classList.add("dark");
+  setThemeColor(DARK_THEME_COLOR);
 };
 const setLight = () => {
   localStorage.theme = "light";
   document.documentElement.classList.remove("dark");
+  setThemeColor(LIGHT_THEME_COLOR);
 };
 
 export default function ThemeToggle() {
