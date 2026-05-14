@@ -1,12 +1,15 @@
 // pages/_document.js
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { DARK_THEME_COLOR, LIGHT_THEME_COLOR } from "../util/theme-colors";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" className="dark">
         <Head>
+          <meta name="theme-color" content={DARK_THEME_COLOR} />
+          <meta name="color-scheme" content="dark light" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
             rel="stylesheet"
@@ -42,13 +45,25 @@ class MyDocument extends Document {
             id="darkTheme"
             dangerouslySetInnerHTML={{
               __html: `
+          const darkThemeColor = '${DARK_THEME_COLOR}';
+          const lightThemeColor = '${LIGHT_THEME_COLOR}';
+
+          function updateThemeColor(isDark) {
+            const themeColor = document.querySelector('meta[name="theme-color"]');
+            if (themeColor) {
+              themeColor.setAttribute('content', isDark ? darkThemeColor : lightThemeColor);
+            }
+          }
+
           function checkDarkTheme() {
 
-            if (localStorage.theme === 'light') {
-              document.documentElement.classList.remove('dark')
-            } else {
+            const isDark = localStorage.theme !== 'light';
+            if (isDark) {
               document.documentElement.classList.add('dark')
+            } else {
+              document.documentElement.classList.remove('dark')
             }
+            updateThemeColor(isDark);
             
             
           }
