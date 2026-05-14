@@ -7,6 +7,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="dark">
         <Head>
+          {/* theme-color tells iOS 26 Liquid Glass what colour to blend against */}
+          <meta id="theme-color-meta" name="theme-color" content="#111827" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
             rel="stylesheet"
@@ -43,14 +45,14 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
           function checkDarkTheme() {
-
-            if (localStorage.theme === 'light') {
-              document.documentElement.classList.remove('dark')
+            var isDark = localStorage.theme !== 'light';
+            if (isDark) {
+              document.documentElement.classList.add('dark');
             } else {
-              document.documentElement.classList.add('dark')
+              document.documentElement.classList.remove('dark');
             }
-            
-            
+            var meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', isDark ? '#111827' : '#f3f4f6');
           }
           checkDarkTheme()
           `,
