@@ -2,6 +2,9 @@
   "name": "portfolio2022",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -25,7 +28,7 @@
   "devDependencies": {
     "@netlify/functions": "^1.0.0",
     "@netlify/plugin-nextjs": "^4.29.3",
-    "@types/node": "17.0.23",
+    "@types/node": "24",
     "@types/react": "18.0.1",
     "@types/react-dom": "18.0.0",
     "@types/sanitize-html": "^2.6.2",
@@ -34,6 +37,6 @@
     "eslint-config-next": "12.1.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23",
-    "typescript": "4.6.3"
+    "typescript": "^6.0.3"
   }
 }
